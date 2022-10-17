@@ -4,7 +4,7 @@ function cellsCreation(maxCells, containerEl){
             //nel ciclo for aggiungo le caselle dentro al container
             const cellMarkup = `<div class="cella">${i}</div>`
             containerEl.innerHTML += cellMarkup;
-    } 
+    }
 }
 function interazione(elencoCasella) {
     for (let i = 0; i < elencoCasella.length; i++) {
@@ -19,14 +19,12 @@ function interazione(elencoCasella) {
 }
 /* ################################################## */ 
 
-let containerElement = document.querySelector('.container');
-containerElement += cellsCreation(100, containerElement);
-const cellsEl = document.querySelectorAll('.cella');
-interazione(cellsEl);
 const buttonEl = document.querySelector('.btn');
-
 buttonEl.addEventListener('click', function(){
-    //console.log('ho clicato');
-    const containerEl = document.querySelector('.container');
-    containerEl.classList.toggle('active');
+    console.log('ho clicato');
+    let containerElement = document.querySelector('.container');
+    containerElement.classList.toggle('active');
+    cellsCreation(100, containerElement);
+    const cellsEl = document.querySelectorAll('.cella');
+    interazione(cellsEl);
 })
