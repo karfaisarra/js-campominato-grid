@@ -25,3 +25,8 @@ const cellsEl = document.querySelectorAll('.cella');
 interazione(cellsEl);
 const buttonEl = document.querySelector('.btn');
 
+buttonEl.addEventListener('click', function(){
+    //console.log('ho clicato');
+    const containerEl = document.querySelector('.container');
+    containerEl.classList.toggle('active');
+})
