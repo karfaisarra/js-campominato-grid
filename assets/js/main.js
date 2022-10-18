@@ -20,10 +20,10 @@ function interazione(elencoCasella) {
 /* ################################################## */ 
 
 const buttonEl = document.querySelector('.btn');
+let containerElement = document.querySelector('.container');
 buttonEl.addEventListener('click', function(){
-    console.log('ho clicato');
-    let containerElement = document.querySelector('.container');
-    containerElement.classList.toggle('active');
+    //console.log('ho clicato');
+    containerElement.innerHTML = '';
     cellsCreation(100, containerElement);
     const cellsEl = document.querySelectorAll('.cella');
     interazione(cellsEl);
